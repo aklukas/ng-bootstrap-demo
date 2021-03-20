@@ -1,0 +1,14 @@
+<nav class="navbar bg-dark navbar-dark">
+  <div ngbDropdown class="d-inline-block">
+    <button class="navbar-toggler text-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+            ngbDropdownToggle>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div ngbDropdownMenu class="collapse navbar-collapse" id="collapsibleNavbar">
+      <a ngbDropdownItem class="nav-link" *ngIf="router.url !== '/articles'" [routerLink]="'/articles'">Articles</a>
+      <a ngbDropdownItem class="nav-link" *ngIf="router.url !== '/home'" [routerLink]="'/home'">Home</a>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
